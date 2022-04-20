@@ -1,0 +1,33 @@
+.footer {
+    background-color: $secondary-color;
+    color: $primary-color;
+    display: flex;
+
+    flex-flow: column nowrap;
+    justify-content: center;
+    min-width: 100%;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2em;
+    }
+
+    &__content-element {
+
+        span {
+            font-size: 1.2em;
+            display: block;
+            padding: 0.2em;
+
+        }
+    }
+
+
+    &__copyrights {
+        text-align: center;
+        background-color: $primary-color;
+        color: $secondary-color;
+    }
+}
