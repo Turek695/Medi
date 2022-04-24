@@ -1,0 +1,11 @@
+.gallery__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.gallery__image-cont {
+  display: flex;
+  flex-basis: 350px;
+  padding: 1em;
+}

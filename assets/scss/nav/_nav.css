@@ -12,11 +12,11 @@
   z-index: 10;
 }
 
-.nav-btn {
+.btn {
   display: none;
 }
 
-.nav-btn__btn {
+.btn__btn {
   padding: 2em;
 }
 
@@ -59,7 +59,7 @@
     display: block;
     padding: 1em;
   }
-  .nav-btn {
+  .btn {
     display: flex;
   }
 }
