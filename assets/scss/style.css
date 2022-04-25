@@ -69,20 +69,41 @@ html {
   scroll-behavior: smooth;
 }
 
-.article__p {
+.article {
   display: flex;
-  font-size: 1.2em;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   justify-content: space-around;
-  margin: 2em 0;
-  text-indent: 30px;
+  margin: 0 1em;
+}
+
+.article .h2 {
+  width: 100%;
+}
+
+.article__p {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+  text-indent: 2em;
+}
+
+.article__text-cont {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin: 1em;
+  flex: 1.5 .8 600px;
+}
+
+.article__image {
+  max-width: 100%;
 }
 
 .article__image-cont {
   display: flex;
+  flex: .5 .8 600px;
   justify-content: center;
-  flex-basis: 100%;
-  padding: 1em;
+  margin: 1em;
 }
 
 .article::before {
@@ -100,7 +121,7 @@ html {
 }
 
 .bold {
-  font-family: bold;
+  font-weight: bold;
 }
 
 .h1 {
@@ -145,21 +166,21 @@ html {
 }
 
 .page__content {
-  max-width: 780px;
   display: flex;
   flex-flow: nowrap column;
   margin: auto;
   padding: 1em;
 }
 
-.video-container {
-  width: 100%;
-  border: 1em solid #ebebeb;
-}
-
 @media (max-width: 780px) {
   html {
     font-size: 12px;
+  }
+  .article__text-cont {
+    width: 100%;
+  }
+  .article__image-cont {
+    width: 100%;
   }
 }
 
@@ -212,6 +233,9 @@ html {
 @media (max-width: 780px) {
   .nav {
     flex-direction: column;
+  }
+  .nav-btn__btn {
+    padding: .1em;
   }
   .nav-menu {
     justify-content: center;
@@ -282,7 +306,7 @@ html {
 
 .footer__content {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-around;
   padding: 2em;
 }
@@ -292,10 +316,31 @@ html {
   display: flex;
   align-content: center;
   padding: 0.2em;
+  margin: 0.2em 0;
+  box-sizing: content-box;
+}
+
+.footer__content-element span a {
+  box-sizing: content-box;
+}
+
+.footer__content-element span a:hover {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.footer__map {
+  width: 400;
+  height: 300;
 }
 
 .footer__copyrights {
   text-align: center;
   background-color: #ebebeb;
   color: #0152a0;
+}
+
+@media (max-width: 780px) {
+  .footer__map {
+    display: none;
+  }
 }

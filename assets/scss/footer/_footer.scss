@@ -9,7 +9,7 @@
 
     &__content {
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: space-around;
         padding: 2em;
     }
@@ -21,14 +21,34 @@
             display: flex;
             align-content: center;
             padding: 0.2em;
+            margin: 0.2em 0;
+            box-sizing: content-box;
 
+            a {
+                box-sizing: content-box;
+
+                &:hover {
+                    border-bottom: 1px solid whitesmoke;
+                }
+            }
         }
     }
 
+    &__map {
+        width: 400;
+        height: 300;
+    }
 
     &__copyrights {
         text-align: center;
         background-color: $primary-color;
         color: $secondary-color;
+
+    }
+}
+
+@media (max-width: 780px) {
+    .footer__map {
+        display: none;
     }
 }

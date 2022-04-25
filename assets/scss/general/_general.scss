@@ -10,20 +10,39 @@ html {
 }
 
 .article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 1em;
+
+    .h2 {
+        width: 100%
+    }
+
     &__p {
-        display: flex;
         font-size: 1.2em;
+        margin: 0.5em 0;
+        text-indent: 2em;
+    }
+
+    &__text-cont {
+        align-items: center;
+        display: flex;
         flex-flow: column nowrap;
-        justify-content: space-around;
-        margin: 2em 0;
-        text-indent: 30px;
+        justify-content: center;
+        margin: 1em;
+        flex: 1.5 .8 600px;
+    }
+
+    &__image {
+        max-width: 100%
     }
 
     &__image-cont {
         display: flex;
+        flex: .5 .8 600px;
         justify-content: center;
-        flex-basis: 100%;
-        padding: 1em;
+        margin: 1em;
     }
 
     &::before {
@@ -33,6 +52,11 @@ html {
         height: 5em;
         visibility: hidden;
     }
+
+    // &:nth-child(even) {
+    //     background-color: $secondary-color;
+    //     color: $primary-color;
+    // }
 }
 
 .backdrop-blur {
@@ -42,7 +66,8 @@ html {
 }
 
 .bold {
-    font-family: bold;
+    font-weight: bold;
+
 }
 
 .h1 {
@@ -86,11 +111,8 @@ html {
     color: $secondary-color;
     min-height: 100%;
     min-width: 100%;
-    // display: flex;
-
 
     &__content {
-        max-width: 780px;
         display: flex;
         flex-flow: nowrap column;
         margin: auto;
@@ -98,13 +120,19 @@ html {
     }
 }
 
-.video-container {
-    width: 100%;
-    border: 1em solid $primary-color;
-}
 
 @media (max-width: 780px) {
     html {
         font-size: 12px;
+    }
+
+    .article {
+        &__text-cont {
+            width: 100%
+        }
+
+        &__image-cont {
+            width: 100%
+        }
     }
 }
