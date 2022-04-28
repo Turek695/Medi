@@ -13,7 +13,7 @@ html {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    margin: 0 1em;
+    padding: 1em;
 
     .h2 {
         width: 100%
@@ -53,10 +53,11 @@ html {
         visibility: hidden;
     }
 
-    // &:nth-child(even) {
-    //     background-color: $secondary-color;
-    //     color: $primary-color;
-    // }
+    &:nth-child(even) {
+        background-color: $secondary-color;
+        color: $primary-color;
+        flex-direction: row-reverse;
+    }
 }
 
 .backdrop-blur {
@@ -115,8 +116,8 @@ html {
     &__content {
         display: flex;
         flex-flow: nowrap column;
-        margin: auto;
-        padding: 1em;
+        margin: 0;
+        padding: 0;
     }
 }
 
